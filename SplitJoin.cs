@@ -80,7 +80,12 @@ public class SplitJoin {
 	}
 
 	private static void helpSplit() {
-		Console.WriteLine("usage: SplitJoin split [-h] [-s] [-p] <filename>");
+		Console.WriteLine("usage: SplitJoin split [-h] [-s] [-p] <filename>\n" +
+				"arguments:\n" +
+				"[-h]       show help for this command\n" +
+				"[-s]       specify the size for each part to be be (in bytes)\n" +
+				"[-p]       specify the number of parts to split <filename> into\n" +
+				"<filename> specify the filename to split");
 		Environment.Exit(64);
 	}
 
@@ -132,7 +137,12 @@ public class SplitJoin {
 	}
 
 	private static void helpJoin() {
-		Console.WriteLine("usage: SplitJoin join [-h] <filename>");
+		Console.WriteLine("usage: SplitJoin join [-h] <filename>\n" +
+				"arguments:\n" +
+				"[-h]       show help for this command\n" +
+				"<filename> specify the filename to join (e.g. if the" +
+				" files are \"reg.avi.0\", \"reg.avi.1\", ... then <filename> is" +
+				" specified as \"reg.avi\"");
 		Environment.Exit(64);
 	}
 
